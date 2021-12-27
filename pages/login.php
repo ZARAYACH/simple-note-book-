@@ -42,24 +42,15 @@
                 </g>
                 </svg>
 
-<<<<<<< HEAD
     </div>
     </div>
-=======
-    </div>
-    </div>
->>>>>>> f2ab8675bce220e34e0eabd6a940fe2656c3fec7
     <div class="container">
         <div class="login-container">
             <div class="titre">
                 Great to see you again<br><span>Let's write some note !!</span> 
 </div>
             <div class="credentiels">
-<<<<<<< HEAD
                 <form action="..\auth\login.inc.php" method="post">
-=======
-                <form action="login.php" method="post">
->>>>>>> f2ab8675bce220e34e0eabd6a940fe2656c3fec7
                     <input class="sub1" type="text" name="user-name" placeholder="Username..">
                     <input class="sub1" type="password" name="password" placeholder="Password..">
                     <input class="sub" type="submit" value="Connexion">
