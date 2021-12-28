@@ -23,7 +23,8 @@
 </div>
 <div class="container-above">
     <div class="left">
-        <div class="logo">
+        <a href="../pages/home.php">
+          <div class="logo">
             <svg id="Composant_7_1" data-name="Composant 7 – 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 315 113">
   <path id="Tracé_14" data-name="Tracé 14" d="M102.337,79.054a2.113,2.113,0,0,0-2.115,2.115v.7a2.115,2.115,0,0,0,4.229,0v-.707a2.115,2.115,0,0,0-2.115-2.11Z" transform="translate(18.549 -7.366)" fill="#4f2e13"/>
   <g id="logo" transform="translate(-140 -53)">
@@ -44,6 +45,7 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
 </svg>
 
         </div>
+        </a>
         <div class="titre" >
             Create an Account
         </div>
@@ -57,7 +59,7 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
             <input  type="password" name="password" placeholder="Password...">
         <input  type="password" name="password-repeat" placeholder="Reapet Password...">
         <input  type="submit" value="sign up">
-        <a href="#">Forgot your Password ?</a>
+        <a href="../pages/login.php">I have an Account</a>
            </form>     
     </div>
     <div class="right">

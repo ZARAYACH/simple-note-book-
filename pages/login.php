@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/log-in-style.css">
 </head>
 <body>
+    
     <div class="svgs">
         <div class="power1">
             <svg viewBox="0 0 530.526 766.814">
