@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../assets/book.svg">
     <link rel="apple-touch-icon" href="../assets/book.svg">
     <title>simple book note</title>
-    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/log-in-style.css">
 </head>
 <body>
     <div class="svgs">
@@ -68,11 +68,7 @@
             <a href="signup.php" class="button-sign">Sign Up NOW !</a>
         </div>
     </div>
-<<<<<<< HEAD
-<?php include '..\bases\footer.html';?>
-=======
 
     <script src="../js/script.js"></script>
 </body>
 </html>
->>>>>>> f2ab8675bce220e34e0eabd6a940fe2656c3fec7
