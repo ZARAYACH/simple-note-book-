@@ -23,7 +23,7 @@
 </div>
 <div class="container-above">
     <div class="left">
-        <a href="../pages/home.php">
+        <a href="../index.php">
           <div class="logo">
             <svg id="Composant_7_1" data-name="Composant 7 – 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 315 113">
   <path id="Tracé_14" data-name="Tracé 14" d="M102.337,79.054a2.113,2.113,0,0,0-2.115,2.115v.7a2.115,2.115,0,0,0,4.229,0v-.707a2.115,2.115,0,0,0-2.115-2.11Z" transform="translate(18.549 -7.366)" fill="#4f2e13"/>
