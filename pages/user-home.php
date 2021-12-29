@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/user-home.css">
+    <link rel="stylesheet" href="../second_css/user-home.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="background">
-           <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1606 162.713">
-  <path id="Tracé_110" data-name="Tracé 110" d="M0,0H1606V122.3s-217.962-9.68-506.355,24.961S597.528,151.518,318.162,122.3,0,122.3,0,122.3Z" transform="translate(0)" fill="#ffee91"/>
-</svg>
+<body>  
+  <!-- for the interface that shows above the content -->
+<div class="overlay"></div>
+        <div class="write-note">
+            <form action="">
+              <input type="text" name="titre" id="titre" placeholder="write a title for your note">
+              <textarea id="note"placeholder="write your notes here ..."></textarea>
+              <div class="div" class="exep">
+                <input type="submit" value="Save">
+                <input type="reset">
+              </div>
+            </form>
+            
+          </div>
 
-        </div>
+  <!-- ended -->
+  <!-- the beggining of real page -->
+
     <div class="header">
         <div class="dashbord">Dashbord</div>
-        <div class="search">
-            <input type="text" placeholder="        Search">
+             <div class="search">
+            <input type="text" placeholder="Search">
         </div>
         <div class="user">
             <div class="profil"><img src="../assets/i168238-msemen.jpeg" alt=""></div>
@@ -76,7 +87,24 @@ Settings</button>
 Log out</button>
         </div>
     </div>
-    
+    <div class="toAdd">
+     <button>
+<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="#ffa600"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
+    </div>
+    </div>
+    <div class="content">
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
 
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
+    </div>
+
+    <script src="../master_js/script.js"></script>
 </body>
 </html>

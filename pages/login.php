@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../assets/book.svg">
     <link rel="apple-touch-icon" href="../assets/book.svg">
     <title>simple book note</title>
-    <link rel="stylesheet" href="../css/log-in-style.css">
+    <link rel="stylesheet" href="../second_css/log-in-style.css">
 </head>
 <body>
     
