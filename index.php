@@ -45,7 +45,8 @@
     </ul>
 </div>
     <div class="welcome-section">
-        <svg class="svg2" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 737.39 544">
+       <div class="right">
+       <svg class="svg2" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 737.39 544">
             <g id="undraw_taking_notes_re_bnaf" transform="translate(0)">
               <path id="Path_45" data-name="Path 45" d="M504.621,513.182,351.975,545.357a17.019,17.019,0,0,1-20.141-13.128l-26.193-124.27a17.019,17.019,0,0,1,13.128-20.141l152.646-32.175a17.019,17.019,0,0,1,20.14,13.129l26.194,124.269A17.019,17.019,0,0,1,504.621,513.182ZM319.181,389.776A15.017,15.017,0,0,0,307.6,407.547l26.194,124.269A15.017,15.017,0,0,0,351.562,543.4l152.646-32.175a15.017,15.017,0,0,0,11.584-17.771L489.6,369.184A15.017,15.017,0,0,0,471.827,357.6Z" transform="translate(-231.305 -178)" fill="#3f3d56"/>
               <path id="Path_411" data-name="Path 411" d="M461.93,396.618l-77.038,16.239a2.731,2.731,0,0,1-3.229-1.863,2.631,2.631,0,0,1,2-3.254l78.421-16.53c3.062,1.726,2.094,4.935-.152,5.409Z" transform="translate(-231.305 -178)" fill="#ccc"/>
@@ -128,10 +129,12 @@
               <circle id="Ellipse_37" data-name="Ellipse 37" cx="6.467" cy="6.467" r="6.467" transform="translate(676.297 426.404)" fill="#d6d6d6"/>
             </g>
           </svg>
-          <h1>Welcome to your <span class="OnlineColor">Online</span><br><span class="OnlineColor">Note Book !</span></h1>
+       </div>
+         <div class="left"> 
+           <h1>Welcome to your <span class="OnlineColor">Online</span><br><span class="OnlineColor">Note Book !</span></h1>
           <p>here you can save your note from any device & you acces them from anywhere
             sign up now for more features </p>
-            <a class="btn1" href="./pages/signup.php">Sign Up NOW !</a>
+            <a class="btn1" href="./pages/signup.php">Sign Up NOW !</a></div>
             <svg class="svg3" width="30" height="28" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 0L7 5L12 0L14 1L7 8L0 1L2 0Z" fill="#FFAF23"/>
             </svg>

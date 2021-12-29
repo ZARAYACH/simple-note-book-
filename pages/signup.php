@@ -12,9 +12,8 @@
 </head>
 
 <body>
-<!-- <form action="..\auth\signup.inc.php" method="post">
     
-</form> -->
+</form> 
 
 <div class="container">
     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1497.716 1080">

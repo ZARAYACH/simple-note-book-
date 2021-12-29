@@ -1,3 +1,10 @@
+<?php 
+  session_start();
+  if(!isset($_SESSION)){
+    header("location:../index.php?wrongway");
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +39,7 @@
         </div>
         <div class="user">
             <div class="profil"><img src="../assets/i168238-msemen.jpeg" alt=""></div>
-            <div class="user-name">Mohammed <br> zaray</div>
+            <div class="user-name"><?php echo($_SESSION['firstname']); ?><br><?php echo($_SESSION['email']); ?></div>
         </div>
         </div>
         
@@ -77,7 +84,8 @@ Archived</button>
   <path id="Tracé_114" data-name="Tracé 114" d="M29.1,22.5a2.475,2.475,0,0,0,.495,2.73l.09.09a3,3,0,1,1-4.245,4.245l-.09-.09a2.5,2.5,0,0,0-4.23,1.77V31.5a3,3,0,1,1-6,0v-.135A2.475,2.475,0,0,0,13.5,29.1a2.475,2.475,0,0,0-2.73.495l-.09.09A3,3,0,1,1,6.435,25.44l.09-.09a2.5,2.5,0,0,0-1.77-4.23H4.5a3,3,0,1,1,0-6h.135A2.475,2.475,0,0,0,6.9,13.5a2.475,2.475,0,0,0-.5-2.73l-.09-.09A3,3,0,1,1,10.56,6.435l.09.09a2.475,2.475,0,0,0,2.73.495h.12A2.475,2.475,0,0,0,15,4.755V4.5a3,3,0,0,1,6,0v.135a2.5,2.5,0,0,0,4.23,1.77l.09-.09a3,3,0,1,1,4.245,4.245l-.09.09a2.475,2.475,0,0,0-.5,2.73v.12A2.475,2.475,0,0,0,31.245,15H31.5a3,3,0,0,1,0,6h-.135A2.475,2.475,0,0,0,29.1,22.5Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
 </svg>
 Settings</button>
-            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.5 37.5">
+            <form action="../auth/logout.inc.php" method="POST">
+            <button type="submit" id="log_out"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.5 37.5">
   <g id="Icon_feather-log-out" data-name="Icon feather-log-out" transform="translate(-3 -3)">
     <path id="Tracé_104" data-name="Tracé 104" d="M16,39H8.333A3.833,3.833,0,0,1,4.5,35.167V8.333A3.833,3.833,0,0,1,8.333,4.5H16" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
     <path id="Tracé_105" data-name="Tracé 105" d="M24,29.667l9.583-9.583L24,10.5" transform="translate(5.417 1.667)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
@@ -85,6 +93,7 @@ Settings</button>
   </g>
 </svg>
 Log out</button>
+            </form>
         </div>
     </div>
     <div class="toAdd">
@@ -103,8 +112,103 @@ Log out</button>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
         </div>
       </div>
+
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
+
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
+
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
+
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
+
+
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
+
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
+
+
+
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
+
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
+
+
+
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
+
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
+
+
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
+
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
+
+
+
+      <div class="note">
+        <div class="note_header">
+        <div class="note_title"></div>
+        <div class="note_date"></div>
+        </div>
+
+        <div class="main_note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
+        </div>
+      </div>
     </div>
 
     <script src="../master_js/script.js"></script>
+    <script> 
+    var log_out = document.querySelector("#log_out");
+    log_out.addEventListener('click',function(){
+        <?php 
+          session_destroy();
+          header("location:../index.php");
+          exit();
+        ?>
+    })
+  </script>
 </body>
 </html>
