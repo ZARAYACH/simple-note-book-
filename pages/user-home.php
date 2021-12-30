@@ -1,9 +1,34 @@
 <?php 
   session_start();
-  if(!isset($_SESSION)){
-    header("location:../index.php?wrongway");
+  if($_COOKIE['logined']==false)
+  {
+    header ("location:..\pages\login.php?error=wrongway");
     exit();
-  }
+  }else{
+    $user_file = "../users/".$_COOKIE['username'].".txt";
+    $contents = file_get_contents($user_file);
+    $elements=explode("§",$contents);
+    
+
+    for($i=0;$i<=sizeof($elements);$i++){
+        if($i==0){
+            $_SESSION['username']=$elements[$i];
+        }else if($i==1){
+            continue;
+        }else if($i==2){
+            $_SESSION['email']=$elements[$i];
+        }else if($i==3){
+            $_SESSION['lastname']=$elements[$i];
+        }else if($i==4){
+            $_SESSION['firstname']=$elements[$i];
+
+        }
+        $username=$_SESSION['username'];
+      }
+    }
+  
+    
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,11 +43,11 @@
   <!-- for the interface that shows above the content -->
 <div class="overlay"></div>
         <div class="write-note">
-            <form action="">
+            <form action="../auth/savenote.inc.php" method="POST">
               <input type="text" name="titre" id="titre" placeholder="write a title for your note">
-              <textarea id="note"placeholder="write your notes here ..."></textarea>
+              <textarea name="note" id="note" placeholder="write your notes here ..."></textarea>
               <div class="div" class="exep">
-                <input type="submit" value="Save">
+                <input type="submit" name="save-note" value="Save">
                 <input type="reset">
               </div>
             </form>
@@ -39,7 +64,7 @@
         </div>
         <div class="user">
             <div class="profil"><img src="../assets/i168238-msemen.jpeg" alt=""></div>
-            <div class="user-name"><?php echo($_SESSION['firstname']); ?><br><?php echo($_SESSION['email']); ?></div>
+            <div class="user-name"><?php echo($_SESSION['firstname']); ?><br><?php echo($_SESSION['lastname']); ?></div>
         </div>
         </div>
         
@@ -102,113 +127,34 @@ Log out</button>
     </div>
     </div>
     <div class="content">
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
+      <?php
+      $files = scandir('../note_user/');
+      foreach ($files as $file) {
+          $pattern = "/^($username)/";
+        if(preg_match($pattern,$file)==1){
+          $con=file_get_contents("../note_user/".$file);
+            echo("<div class='note'>
+            <div class='note_header'>
+              <div class='note_title'></div>
+              <div class='note_date'></div>
+            </div>
+            <div class='main_note'>$con
+            </div>
+          </div>");
 
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
-
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
-
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
-
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
-
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
+        }
+      }
 
 
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
-
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
-
-
-
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
-
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
-
-
-
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
-
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
-
-
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
-
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
-
-
-
-      <div class="note">
-        <div class="note_header">
-        <div class="note_title"></div>
-        <div class="note_date"></div>
-        </div>
-
-        <div class="main_note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corporis ut molestiae. Et deleniti accusantium illo inventore saepe eos soluta eum perspiciatis aliquam!
-        </div>
-      </div>
+      ?>
+     
     </div>
 
     <script src="../master_js/script.js"></script>
+    
     <script> 
-    var log_out = document.querySelector("#log_out");
-    log_out.addEventListener('click',function(){
-        <?php 
-          session_destroy();
-          header("location:../index.php");
-          exit();
-        ?>
-    })
+
+
   </script>
 </body>
 </html>
