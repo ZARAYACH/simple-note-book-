@@ -44,7 +44,7 @@
 <div class="overlay"></div>
         <div class="write-note">
             <form action="../auth/savenote.inc.php" method="POST">
-              <input type="text" name="titre" id="titre" placeholder="write a title for your note">
+              <input pattern="[A-Za-z0-9]" type="text" name="titre" id="titre" placeholder="write a title for your note">
               <textarea name="note" id="note" placeholder="write your notes here ..."></textarea>
               <div class="div" class="exep">
                 <input type="submit" name="save-note" value="Save">
