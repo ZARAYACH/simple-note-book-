@@ -10,20 +10,14 @@
     <link rel="stylesheet" href="../second_css/log-in-style.css">
 </head>
 <body>
-    
-    <div class="svgs">
-        <div class="power1">
-            <svg viewBox="0 0 530.526 766.814">
-            <path id="Tracé_27" data-name="Tracé 27" d="M-7311.963,732c6.7,13.405-241.293,703.77-248,703.77s308.317-563.016,308.317-563.016Z" transform="translate(7595.198 1897.839) rotate(20)" fill="#f2d985"/>
-            </svg>
-        </div>
-        <div class="power2">
-            <svg  viewBox="0 0 567.01 790.105">
-            <path id="Tracé_26" data-name="Tracé 26" d="M264.707-6.044C271.531,7.317-9.881,709.844-17.032,710.008S325.638,134.488,325.638,134.488Z" transform="translate(258.943 11.542) rotate(20)" fill="#f2d985"/>
-            </svg>
-
-        </div>
-        <div class="note-logo">
+    <div class="wrapper">
+    <div class="container">
+        <div class="login-container">
+           <div class="header-login">
+           <div class="titre">
+                Great to see you again<br><span>Let's write some note !!</span> 
+            </div>
+            <div class="note-logo">
                 <svg  viewBox="0 0 137.17 166">
                 <g id="sticky-notes" transform="translate(-44.46 0.001)">
                 <g id="Groupe_12" data-name="Groupe 12" transform="translate(47.703 3.241)">
@@ -44,12 +38,7 @@
                 </svg>
 
     </div>
-    </div>
-    <div class="container">
-        <div class="login-container">
-            <div class="titre">
-                Great to see you again<br><span>Let's write some note !!</span> 
-</div>
+           </div>
             <div class="credentiels">
                 <form action="..\auth\login.inc.php" method="post">
                     <input class="sub1" type="text" name="user-name" placeholder="Username..">
@@ -70,6 +59,7 @@
         </div>
     </div>
 
+    </div>
     <script src="../js/script.js"></script>
 </body>
 </html>

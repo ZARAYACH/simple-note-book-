@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST5['username']))
+if (isset($_POST['username']))
 {
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     $firstname = filter_var( $_POST['First-name'], FILTER_SANITIZE_STRING);

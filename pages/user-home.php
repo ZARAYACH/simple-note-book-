@@ -134,12 +134,7 @@ Log out</button>
         if(preg_match($pattern,$file)==1){
           $con=file_get_contents("../note_user/".$file);
             echo("<div class='note'>
-            <div class='note_header'>
-              <div class='note_title'></div>
-              <div class='note_date'></div>
-            </div>
-            <div class='main_note'>$con
-            </div>
+              <div class='main_note'>$con</div>
           </div>");
 
         }

@@ -1,50 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap");
 body {
-  margin: 7rem 15rem;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
-  background-color: #fff8d2;
+  background-image: url("../assets/distressed-yellow-wall-texture-background.jpg");
+  background-position: center;
+  background-size: cover;
+  
 }
 * {
   z-index: 1000;
 }
-.svgs {
-  width: 100%;
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  top: 0;
+.wrapper{
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  
 }
-.power1,
-.power2 {
-  width: 4rem;
-  height: 10rem;
+
+
+.header-login{
+  display: flex;
+  justify-content: right;
 }
-.power1 svg,
-.power2 svg {
-  width: 100%;
-}
-.power1 {
-  width: 20rem;
-  top: -1rem;
-  position: absolute;
-  left: 7rem;
-}
-.power2 {
-  width: 20rem;
-  top: 15rem;
-  position: absolute;
-  left: 55rem;
-}
-.note-logo {
-  width: 5rem;
-  position: absolute;
-  left: 65.5rem;
-  top: 5.9rem;
-}
-.note-logo svg {
-  width: 100%;
+.note-logo{
+  width: 20%;
 }
 .container {
   width: 100%;
@@ -122,7 +104,9 @@ body {
 }
 .signup-container {
   width: 50%;
-  background-color: #ffc400;
+  background-image: url("../assets/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-and-layout\ \(1\).jpg");
+  background-position: center;
+  background-size: cover;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
