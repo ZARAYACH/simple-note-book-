@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap");
-body {
-  margin: 7rem 15rem;
+html, body {
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
-  background-color: #fff8d2;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 * {
   z-index: 1000;
 }
 .svgs {
-  width: 100%;
+  width: 0;
   z-index: 1;
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
 }
 .power1,
 .power2 {
@@ -27,21 +28,19 @@ body {
 }
 .power1 {
   width: 20rem;
-  top: -1rem;
   position: absolute;
-  left: 7rem;
+  top: 0;
+  left: 50rem;
 }
 .power2 {
   width: 20rem;
-  top: 15rem;
   position: absolute;
-  left: 55rem;
+  top: 0;
+  left: 10rem;
 }
 .note-logo {
   width: 5rem;
   position: absolute;
-  left: 65.5rem;
-  top: 5.9rem;
 }
 .note-logo svg {
   width: 100%;
@@ -51,14 +50,15 @@ body {
   display: flex;
   justify-content: center;
   height: 25rem;
-  background-color: white;
 }
 .login-container {
-  width: 50%;
+  width: 40%;
   order: 2;
   box-shadow: rgba(0, 0, 0, 0.25) 2.4px 2.4px 3.9px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .titre {
   width: 80%;
@@ -155,4 +155,205 @@ body {
 .signup-container a:hover {
   background-color: #fffbc2;
   transform: translateX(5px);
+}
+
+@media screen and (max-width: 829px) {
+  .container  {
+    height: 20rem;
+  }
+  .login-container {
+    width: 100%;
+  }
+  .signup-container  {
+    width: 100%;
+  }
+  .signup-container .text {
+    width: 100%;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  .signup-container .text span {
+    color: rgb(78, 59, 17);
+    font-size: 0.8rem;
+  }
+  .signup-container a {
+    /* padding: 0.7rem 1.7rem; */
+    background-color: #fff;
+    color: #ffc400;
+    font-size: 0.5rem;
+    font-weight: 600;
+    font-style: italic;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+  }
+  .titre {
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 600; 
+    text-align: center;
+    color: #403c18;
+    font-style: italic;
+  }
+  .titre span {
+    font-size: 0.6rem;
+    color: #707070;
+  }
+  .credentiels {
+    width: 70%;
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .credentiels .sub1 {
+    width: 100%;
+    height: 0.7rem;
+    border: 0.01px solid rgb(41, 41, 18);
+    border-radius: 0.5px;
+    margin-top: 0rem;
+    font-size: 0.5rem;
+  }
+  .sub {
+    margin-top: 0.2rem;
+    width: 100%;
+    height: 1rem;
+    border-radius: 0.5px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #ffc400;
+    border: none;
+    font-style: italic;
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .credentiels a {
+    font-size: 0.6rem;
+  }
+  .ios {
+    margin-top: 1rem;
+    border-top: 1px solid #9d9d9d;
+    font-size: 0.6rem;
+  }
+  .note-logo {
+    width: 2.5rem;
+    position: absolute;
+    left: 34rem;
+    top: 5.9rem;
+  }
+  .note-logo svg {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container  {
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .login-container {
+    width: 100%;
+  }
+  .signup-container  {
+    width: 100%;
+  }
+  .signup-container .text {
+    width: 100%;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  .signup-container .text span {
+    color: rgb(78, 59, 17);
+    font-size: 0.8rem;
+  }
+  .note-logo {
+    width: 2.5rem;
+    position: absolute;
+    left: 31rem;
+    top: 5.9rem;
+  }
+  .note-logo svg {
+    width: 100%;
+  }
+  .signup-container a {
+    background-color: #fff;
+    color: #ffc400;
+    font-size: 0.5rem;
+    font-weight: 600;
+    font-style: italic;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+  }
+  .titre {
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 600; 
+    text-align: center;
+    color: #403c18;
+    font-style: italic;
+  }
+  .titre span {
+    font-size: 0.6rem;
+    color: #707070;
+  }
+  .credentiels {
+    width: 70%;
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .credentiels .sub1 {
+    width: 100%;
+    height: 0.7rem;
+    border: 0.01px solid rgb(41, 41, 18);
+    border-radius: 0.5px;
+    margin-top: 0rem;
+    font-size: 0.5rem;
+  }
+  .sub {
+    margin-top: 0.2rem;
+    width: 100%;
+    height: 1rem;
+    border-radius: 0.5px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #ffc400;
+    border: none;
+    font-style: italic;
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .credentiels a {
+    font-size: 0.6rem;
+  }
+  .ios {
+    margin-top: 1rem;
+    border-top: 1px solid #9d9d9d;
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container  {
+    height: 20rem;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
 }
