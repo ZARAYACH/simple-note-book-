@@ -307,6 +307,16 @@
    html{
        font-size: 140%;
    }
+   .main{
+        height: 100vh;
+        width: 100%;
+        padding-left :10% ;
+        padding-right: 10%;
+
+   }
+   .logo a text tspan {
+    font-size: 1.5rem;
+    }
 
   }
   @media (max-width: 1600px) {
@@ -315,16 +325,23 @@
         font-size: 110%;
     }
     .main{
-        height: 110vh;
+        height: 130vh;
+        padding-top: 5rem ;
+    }
+    .center{
+        height: 73%;
+}
     }
     .empty{
-        height: 110vh;
+        height: 130vh;
     }
-  }
   
-  @media (max-width: 1024px) {
+  @media (max-width: 1030px) {
     html{
-        font-size: 90%;
+        font-size: 80%;
+    }
+    .empty{
+        width: 100%;
     }
   }
   
