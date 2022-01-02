@@ -12,7 +12,7 @@ if($_POST){
 require_once '..\auth\functions.inc.php';
 
 if(empty($username) || empty($pwd)){
-    header ("location:..\pages\signup.php?error=emptyinput");
+    header ("location:..\pages\login.php?error=emptyinput");
     exit();
 }
 $user_file = "../users/".$username.".txt";

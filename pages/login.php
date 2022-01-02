@@ -41,16 +41,69 @@
            </div>
             <div class="credentiels">
                 <form action="..\auth\login.inc.php" method="post">
-                    <input class="sub1" type="text" name="user-name" placeholder="Username..">
-                    <input class="sub1" type="password" name="password" placeholder="Password..">
+                    <input class="sub1 username" type="text" name="user-name" placeholder="Username..">
+                    <input class="sub1 password" type="password" name="password" placeholder="Password..">
                     <input class="sub" type="submit" value="Connexion">
                     <a href="#">Forgot your Password ?</a>
                 </form>
+                <script>
+     let username_field = document.querySelector(".username")
+     let password_field = document.querySelector(".password");
+         
+   </script> 
+                </div>
+
+                <div class="error">
+                <?php 
+                                if(isset($_GET["error"])){
+                                $error = $_GET["error"];
+                                switch($error){
+                                 case("emptyinput"):
+                                  echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                  <div class='error_text'>Fields connot be blank </div> <script>
+                                  username_field.classList.add('red2');
+                                  password_field.classList.add('red2');
+                                  </script>");
+                                  break;
+                                  case("useranexist"):
+                                    echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                  <div class='error_text'>This username doesn't exist</div>
+                                  <script> 
+                                  username_field.classList.add('red2');
+                                  </script>
+                                  ");
+                                    break;
+                                    case("uncorrectpwd"):
+                                      echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                      <div class='error_text'>Uncorrect password </div>
+                                      <script> password_field.classList.add('red2');
+              
+                                  </script>
+                                      ");
+                                      break;
+                                  case("somethingwentwrong"):
+                                    echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                    <div class='error_text'>plaese wait and repeat  </div>
+                                    <script> 
+                                  username_field.classList.add('red2');
+                                  password_field.classList.add('red2');
+                                  </script>");    
+                                  break;
+                                  case("signupsucced"):
+                                    echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                    <div class='error_text'>Please log in to activate your Account </div>
+                                    <script>" );
+                                    break;
+                               }
+                            }
+          ?>
+
+                </div>
                 <div class="ios" >
                     Lookin for ios app ? <span><a href="#">download here</a></span>
                 </div>
             </div>
-        </div>
+            
         <div class="signup-container">
             <div class="text">
                 You Don't have an account ?<br><span>what are you waiting for !!</span>
