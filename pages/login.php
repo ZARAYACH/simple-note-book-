@@ -60,21 +60,21 @@
                                 switch($error){
                                  case("emptyinput"):
                                   echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
-                                  <div class='error_text'>Fields connot be blank </div> <script>
+                                  <div style='font-size: 0.7rem;' class='error_text'>Fields connot be blank </div> <script>
                                   username_field.classList.add('red2');
                                   password_field.classList.add('red2');
                                   </script>");
                                   break;
                                   case("useranexist"):
                                     echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
-                                  <div class='error_text'>This username doesn't exist</div>
+                                  <div style='font-size: 0.7rem;' class='error_text'>This username doesn't exist</div>
                                   <script> 
                                   username_field.classList.add('red2');
                                   </script>
                                   ");
                                     break;
                                     case("uncorrectpwd"):
-                                      echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                      echo("<div style='font-size: 0.7rem;' class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
                                       <div class='error_text'>Uncorrect password </div>
                                       <script> password_field.classList.add('red2');
               
@@ -82,7 +82,7 @@
                                       ");
                                       break;
                                   case("somethingwentwrong"):
-                                    echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                    echo("<div style='font-size: 0.7rem;' class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
                                     <div class='error_text'>plaese wait and repeat  </div>
                                     <script> 
                                   username_field.classList.add('red2');
@@ -90,7 +90,7 @@
                                   </script>");    
                                   break;
                                   case("signupsucced"):
-                                    echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                                    echo("<div style='font-size: 0.7rem;' class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
                                     <div class='error_text'>Please log in to activate your Account </div>
                                     <script>" );
                                     break;
