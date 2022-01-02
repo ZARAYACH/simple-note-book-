@@ -21,16 +21,16 @@ if(EmptyInput($username,$firstname,$lastname,$email,$pwd,$pwd_repeat)===true)
     exit();
 }
 // we will validate the email later
-// if(ValidateEmail($email)===false)
-// {
-//     header ("location:..\pages\signup.php?error=Wrongemail");
-//     exit();
-// }
+if(ValidateEmail($email)===false)
+{
+    header ("location:..\pages\signup.php?error=Wrongemail");
+    exit();
+}
 
 
 if(ValidatePwd($pwd,$pwd_repeat)===false)
 {
-    header ("location:..\pages\signup.php?error=Wrongemail");
+    header ("location:..\pages\signup.php?error=Unmatchedpassword");
     exit();
 
 }

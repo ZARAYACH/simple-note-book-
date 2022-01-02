@@ -11,8 +11,7 @@
     
 </head>
 
-<body>
-    
+<body>   
 </form> 
 
 <div class="container">
@@ -47,13 +46,84 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
         </div>
            <form action="../auth/signup.inc.php" method="POST">
            <div class="uniq">
-            <input  type="text" name="First-name" placeholder="First name...">
-            <input  type="text" name="Last-name" placeholder="Last Name...">
+            <input class="First-name" type="text" name="First-name" placeholder="First name...">
+            <input class="Last-name" type="text" name="Last-name" placeholder="Last Name...">
            </div>
-             <input  type="text" name="username" placeholder="Username..">
-            <input  type="text" name="email" placeholder="email..."> 
-            <input  type="password" name="password" placeholder="Password...">
-        <input  type="password" name="password-repeat" placeholder="Reapet Password...">
+             <input class="username"  type="text" name="username" placeholder="Username..">
+            <input class="email" type="text" name="email" placeholder="email..."> 
+            <input class="password" type="password" name="password" placeholder="Password...">
+        <input class="password-repeat"  type="password" name="password-repeat" placeholder="Reapet Password...">
+        <script>
+     let firstname_field = document.querySelector(".First-name");
+     let lastname_field = document.querySelector(".Last-name");
+     let username_field = document.querySelector(".username")
+     let email_field = document.querySelector(".email");
+     let password_field = document.querySelector(".password");
+     let passwordReapet_field = document.querySelector(".password-repeat");
+
+     
+   </script> 
+        <div class="error">
+        <?php 
+              if(isset($_GET["error"])){
+                  $error = $_GET["error"];
+                 switch($error){
+                   case("imptyinput"):
+                    echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                    <div class='error_text'>Fields connot be blank </div> <script> firstname_field.classList.add('red');
+                    lastname_field.classList.add('red');
+                    email_field.classList.add('red');
+                    username_field.classList.add('red');
+                    password_field.classList.add('red');
+                    passwordReapet_field.classList.add('red');
+                    
+                    </script>");
+                   
+                    break;
+                    case("userexists"):
+                      echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                    <div class='error_text'>This username already exists</div>
+                    <script> 
+                    username_field.classList.add('red');
+                    </script>
+                    ");
+                      break;
+                      case("Wrongemail"):
+                        echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                    <div class='error_text'>Please respect the email form exemple : john@exemple.com  </div>
+                    <script>
+                    email_field.classList.add('red');
+                    </script>");
+                      break;
+                      case("Unmatchedpassword"):
+                        echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                        <div class='error_text'>Unmatched password </div>
+                        <script> password_field.classList.add('red');
+                    passwordReapet_field.classList.add('red');
+                    </script>
+                        ");
+                        break;
+                    case("somethingwentwrong"):
+                      echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
+                      <div class='error_text'>plaese wait and repeat  </div>
+                      <script> firstname_field.classList.add('red');
+                    lastname_field.classList.add('red');
+                    email_field.classList.add('red');
+                    username_field.classList.add('red');
+                    password_field.classList.add('red');
+                    passwordReapet_field.classList.add('red');
+                    
+                    </script>
+                      ");
+                      echo('plaese wait and repeat ');
+                      break;
+                    case("signupsucced"):
+                     echo("<script> window.location = '../pages/login.php?error=signupsucced' </script>");
+                      break;
+                 }
+              }
+          ?>
+        </div>
         <input  type="submit" value="sign up">
         <a href="../pages/login.php">I have an Account</a>
            </form>     
@@ -62,6 +132,6 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
         <img src="../assets/img-login.svg" alt="">
     </div>
 </div>
-   <script src="../js/script.js"></script>
+
 </body>
 </html>
