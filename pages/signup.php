@@ -106,14 +106,6 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
                     case("somethingwentwrong"):
                       echo("<div class='error_logo'><img src='../assets/error_black_24dp.svg' alt=''></div>
                       <div class='error_text'>plaese wait and repeat  </div>
-                      <script> firstname_field.classList.add('red');
-                    lastname_field.classList.add('red');
-                    email_field.classList.add('red');
-                    username_field.classList.add('red');
-                    password_field.classList.add('red');
-                    passwordReapet_field.classList.add('red');
-                    
-                    </script>
                       ");
                       echo('plaese wait and repeat ');
                       break;
