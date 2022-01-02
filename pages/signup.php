@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\css\sign-up-style.css">
+    <link rel="stylesheet" href="..\second_css\sign-up-style.css">
     <link rel="shortcut icon" href="..\assets\book.svg">
     <link rel="apple-touch-icon" href="..\assets\book.svg">
     <title>simple book note</title>
@@ -12,9 +12,8 @@
 </head>
 
 <body>
-<!-- <form action="..\auth\signup.inc.php" method="post">
     
-</form> -->
+</form> 
 
 <div class="container">
     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1497.716 1080">
@@ -26,7 +25,6 @@
         <a href="../index.php">
           <div class="logo">
             <svg id="Composant_7_1" data-name="Composant 7 – 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 315 113">
-  <path id="Tracé_14" data-name="Tracé 14" d="M102.337,79.054a2.113,2.113,0,0,0-2.115,2.115v.7a2.115,2.115,0,0,0,4.229,0v-.707a2.115,2.115,0,0,0-2.115-2.11Z" transform="translate(18.549 -7.366)" fill="#4f2e13"/>
   <g id="logo" transform="translate(-140 -53)">
     <path id="Tracé_9" data-name="Tracé 9" d="M116.253,28.723v89.309a9.731,9.731,0,0,1-9.73,9.723H42.907a9.73,9.73,0,0,1-9.73-9.718v-5.559h4.431a4.33,4.33,0,0,0,3.021-1.248,4.278,4.278,0,0,0-3.021-7.3H33.177V89.261h4.431a4.273,4.273,0,0,0,0-8.547H33.177V66.04h4.431a4.274,4.274,0,1,0,0-8.547H33.177V42.832h4.431a4.331,4.331,0,0,0,3.021-1.249,4.276,4.276,0,0,0-3.021-7.3H33.177V28.726A9.73,9.73,0,0,1,42.907,19h63.617a9.731,9.731,0,0,1,9.73,9.721Z" transform="translate(117.577 36.12)" fill="#f7bd57"/>
     <g id="Groupe_4" data-name="Groupe 4" transform="translate(142.062 70.4)">
