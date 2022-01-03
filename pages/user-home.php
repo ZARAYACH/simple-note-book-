@@ -60,7 +60,9 @@
     <div class="header">
         <div class="dashbord">Dashbord</div>
              <div class="search">
-            <input type="text" placeholder="Search">
+            <form action="../pages/user-home.php" method="get"> <input name="search" type="text" placeholder="Search">
+                              <input type="submit" value="search">  
+          </form>
         </div>
         <div class="user">
             <div class="profil"><img src="../assets/i168238-msemen.jpeg" alt=""></div>
@@ -91,10 +93,13 @@ Note Book" transform="translate(265 53)" fill="#707070" font-size="32" font-fami
 </a>
         </div>
         <div class="buttons" >
-            <button> <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 31.5 36">
+      <a href="../pages/user-home.php">
+      <button> <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 31.5 36">
   <path id="Icon_awesome-book" data-name="Icon awesome-book" d="M31.5,25.313V1.688A1.683,1.683,0,0,0,29.813,0H6.75A6.752,6.752,0,0,0,0,6.75v22.5A6.752,6.752,0,0,0,6.75,36H29.813A1.683,1.683,0,0,0,31.5,34.313V33.188a1.7,1.7,0,0,0-.626-1.315,15.68,15.68,0,0,1,0-5.252A1.676,1.676,0,0,0,31.5,25.313ZM9,9.422A.423.423,0,0,1,9.422,9H24.328a.423.423,0,0,1,.422.422v1.406a.423.423,0,0,1-.422.422H9.422A.423.423,0,0,1,9,10.828Zm0,4.5a.423.423,0,0,1,.422-.422H24.328a.423.423,0,0,1,.422.422v1.406a.423.423,0,0,1-.422.422H9.422A.423.423,0,0,1,9,15.328ZM26.817,31.5H6.75a2.25,2.25,0,0,1,0-4.5H26.817A25.313,25.313,0,0,0,26.817,31.5Z"/>
 </svg>
-notes</button>
+           
+All notes</button>
+      </a>
             <button><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 34.5 31.654">
   <path id="Icon_material-favorite-border" data-name="Icon material-favorite-border" d="M28.012,4.5A10.33,10.33,0,0,0,20.25,8.105,10.33,10.33,0,0,0,12.488,4.5,9.4,9.4,0,0,0,3,13.987c0,6.521,5.865,11.834,14.749,19.907l2.5,2.26,2.5-2.277C31.635,25.821,37.5,20.508,37.5,13.987A9.4,9.4,0,0,0,28.012,4.5Zm-7.59,26.824-.173.172-.172-.172C11.866,23.889,6.45,18.973,6.45,13.987A5.9,5.9,0,0,1,12.488,7.95a6.744,6.744,0,0,1,6.158,4.071h3.226A6.7,6.7,0,0,1,28.012,7.95a5.9,5.9,0,0,1,6.038,6.037C34.05,18.973,28.633,23.889,20.422,31.324Z" transform="translate(-3 -4.5)"/>
 </svg>
@@ -127,18 +132,70 @@ Log out</button>
     </div>
     <div class="content">
       <?php
-      $files = scandir('../note_user/');
-      foreach ($files as $file) {
-          $pattern = "/^($username)/";
-        if(preg_match($pattern,$file)==1){
-          $con=file_get_contents("../note_user/".$file);
-            echo("<div class='note'>
-              <div class='main_note'>$con</div>
-          </div>");
+        if(isset($_GET["search"])){
+          // do some searching
+          $search = $_GET["search"];
+          $files = scandir('../note_user/');
+          foreach ($files as $file) {
+              $pattern = "/^($username)/";
+            if(preg_match($pattern,$file)==1){
+              $titre = explode("#",$file);
+              for ($i=0; $i < sizeof($titre) ; $i++) { 
+                  if($i==1){
+                    $titreWithoutEX= explode('.',$titre[$i]) ;
+                    for($i=0;$i<sizeof($titreWithoutEX);$i++)
+                    {
+                      if($i==0){
+                        $pattern2 = "/^($search)/";
+                        $searchingTitle = $titreWithoutEX[$i];
+                    if(preg_match($pattern2,$searchingTitle)==1){
+                      $con=file_get_contents("../note_user/".$file);
+                      $real_titre_note = $searchingTitle;
 
+                    }
+                      }
+                    }
+                  }
+              }
+              
+              }
+              
+            }
+            if(empty($real_titre_note)){
+              echo("doesn't exist");
+            }else{
+              echo("<div class='note'>
+            <div class='title_note'>$real_titre_note</div>
+            <div class='main_note'>$con</div>
+            </div>");
+          }
         }
-      }
-
+        else
+        {
+          $files = scandir('../note_user/');
+          foreach ($files as $file) {
+              $pattern = "/^($username)/";
+            if(preg_match($pattern,$file)==1){
+              $con=file_get_contents("../note_user/".$file);
+              $titre = explode("#",$file);
+              for ($i=0; $i < sizeof($titre) ; $i++) { 
+                  if($i==1){
+                    $titreWithoutEX= explode('.',$titre[$i]) ;
+                    for ($i=0; $i <sizeof($titreWithoutEX) ; $i++) { 
+                          if($i==0){
+                            $real_titre_note = $titreWithoutEX[$i];
+                          }
+                    }
+                  }
+              }
+              echo("<div class='note'>
+              <div class='title_note'>$real_titre_note</div>
+              <div class='main_note'>$con</div>
+              </div>");
+            }
+          }
+    
+        }
 
       ?>
      
